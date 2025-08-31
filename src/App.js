@@ -23,11 +23,15 @@ function App() {
   return (
     <div className="App">
       <Titulo />
+
       {mostrarLista && <TarjetaDePerfil usuario={usuario} />}
       <button onClick={toggleMostrarLista}>
       {mostrarLista ? 'Ocultar Tarjeta' : 'Mostrar Tarjeta'}
       </button>
+     
       <ListaDeHabilidades habilidades={habilidades} />
+      
+      {mostrarLista && <ListaDeHabilidades habilidades={habilidades} />}
     </div>
   );
 }
