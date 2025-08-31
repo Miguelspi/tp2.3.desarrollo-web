@@ -12,10 +12,17 @@ function App() {
     edad: 38
   };
 
+ 
   const habilidades = ['React', 'JavaScript', 'HTML', 'CSS', 'Node.js'];
 
-  const [mostrarLista, setMostrarLista] = useState(true);
+  const [mostrarTarjeta, setMostrarTarjeta] = useState(true);  
 
+  const [mostrarLista, setMostrarLista] = useState(true);
+  
+  const toggleMostrarTarjeta = () => {
+    setMostrarTarjeta(!mostrarTarjeta);
+  };
+  
   const toggleMostrarLista = () => {
     setMostrarLista(!mostrarLista);
   };
@@ -23,13 +30,16 @@ function App() {
   return (
     <div className="App">
       <Titulo />
-
-      {mostrarLista && <TarjetaDePerfil usuario={usuario} />}
-      <button onClick={toggleMostrarLista}>
-      {mostrarLista ? 'Ocultar Tarjeta' : 'Mostrar Tarjeta'}
+            
+      <button onClick={toggleMostrarTarjeta} style={{margin: '5px', padding: '10px'}}>
+        {mostrarTarjeta ? 'Ocultar Tarjeta' : 'Mostrar Tarjeta'}
       </button>
-     
-      <ListaDeHabilidades habilidades={habilidades} />
+    
+      <button onClick={toggleMostrarLista} style={{margin: '5px', padding: '10px'}}>
+        {mostrarLista ? 'Ocultar Lista' : 'Mostrar Lista'}
+      </button>
+      
+      {mostrarTarjeta && <TarjetaDePerfil usuario={usuario} />}
       
       {mostrarLista && <ListaDeHabilidades habilidades={habilidades} />}
     </div>

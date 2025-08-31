@@ -9,10 +9,10 @@ const ListaDeHabilidades = ({ habilidades }) => {
     }}>
       <h3>Habilidades Técnicas</h3>
       
-      {/* Operador ternario: si el array está vacío muestra mensaje, sino muestra la lista */}
+      
       {habilidades.length === 0 ? (
         <p style={{ color: 'gray', fontStyle: 'italic' }}>
-          No hay habilidades para mostrar
+          No hay habilidades
         </p>
       ) : (
         <ul>

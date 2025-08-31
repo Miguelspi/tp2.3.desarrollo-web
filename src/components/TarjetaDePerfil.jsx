@@ -9,7 +9,7 @@ const TarjetaDePerfil = ({ usuario }) => {
       margin: '20px auto',
       maxWidth: '300px',
       textAlign: 'center',
-      backgroundColor: '#7f9ad4ff'
+      backgroundColor: '#7a7a7cff'
     }}>
       <h2>{usuario.nombre}</h2>
       <p><strong>Profesión:</strong> {usuario.profesion}</p>
